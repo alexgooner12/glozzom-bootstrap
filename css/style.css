@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .navbar .nav-link {
     font-size: 14px;
     text-transform: uppercase;
@@ -59,4 +63,10 @@
 
 #video-play a {
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    #gallery .row {
+        margin-bottom: 0!important;
+    }
 }
