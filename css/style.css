@@ -70,3 +70,12 @@ body {
         margin-bottom: 0!important;
     }
 }
+
+#page-header {
+    height: 200px;
+    background: url('../img/image3.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+}
