@@ -154,7 +154,7 @@
           <div class="row">
               <div class="col">
                   <div class="container p-5">
-                      <a href="#" class="video" data-video="https://www.youtube.com/embedhttps://www.youtube.com/watch?v=NP-nFWmXRjI" data-togglr="modal" data-target="#video-play">
+                      <a href="#" class="video" data-video="https://www.youtube.com/embed/HnwsG9a5riA" data-toggle="modal" data-target="#videoModal">
                           <i class="fas fa-play fa-3x"></i>
                       </a>
                       <h1>See What We Do</h1>
@@ -163,6 +163,22 @@
           </div>
       </div>
   </section>
+  
+  <!--video-modal-->
+  
+  <div class="modal fade" id="videoModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+                <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+            </div>
+        </div>
+      </div>
+ </div>
+
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -170,7 +186,22 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+  <script>
+   $(function(){
+    //Auto play modal video
+    $(".video").click(function(){
+        var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-video"),
+        videoSRCauto = videoSRC + 
+        "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(theModal + ' iframe').attr('src', videoSRCauto);
+        $(theModal + ' button.close').click(function(){
+            $(theModal + ' iframe').attr('src', videoSRC);
+        });
+    });
 
+});
+  </script>
 </body>
 
 </html>
