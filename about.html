@@ -9,10 +9,8 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
   <link rel="stylesheet" href="css/style.css">
   <title>Glozzom</title>
 </head>
@@ -153,7 +151,7 @@
                           <blockquote class="blockquote">
                               <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, tempore.</p>
                           </blockquote>
-                          <footer class="blockqoute-footer">
+                          <footer class="blockquote-footer">
                               John Doe From
                               <cite title="Company 1">Company 1</cite>
                           </footer>
@@ -162,7 +160,7 @@
                           <blockquote class="blockquote">
                               <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, impedit.</p>
                           </blockquote>
-                          <footer class="blockqoute-footer">
+                          <footer class="blockquote-footer">
                               John Snow From
                               <cite title="Company 2">Company 2</cite>
                           </footer>
@@ -171,7 +169,7 @@
                           <blockquote class="blockquote">
                               <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, animi.</p>
                           </blockquote>
-                          <footer class="blockqoute-footer">
+                          <footer class="blockquote-footer">
                               Sam Smith From
                               <cite title="Company 3">Company 3</cite>
                           </footer>
@@ -188,8 +186,14 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script>
+    $('.slider').slick({
+        infinite: true,
+        slideToShow: 1,
+        slideToScroll: 1
+    }); 
+  </script>
 
 </body>
 
